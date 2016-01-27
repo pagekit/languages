@@ -1,0 +1,15 @@
+{
+    "name": "pagekit/pagekit-languages",
+    "require": {
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {"Pagekit\\": "src/"}
+    },
+    "authors": [
+        {
+            "name": "Pagekit",
+            "email": "info@pagekit.com"
+        }
+    ]
+}
