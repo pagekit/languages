@@ -31,6 +31,8 @@ class TransifexApi
         $response = $this->client->request('get', $url, compact('query', 'auth'));
         $response = json_decode((string) $response->getBody(), true);
 
+        $count    = $response['total_entities'];
+
         // We're only interested in locale codes
         $locales = array_map(function($locale) {
             return $locale["code"];
@@ -41,7 +43,7 @@ class TransifexApi
             return $locale != $response["source_language_code"];
         });
 
-        return $locales;
+        return [$locales, $count];
     }
 
     function fetchTranslations($resource, $locale)

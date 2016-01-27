@@ -23,11 +23,19 @@ class Fetcher
      */
     protected $path;
 
-    public function __construct($username, $password, $path, $project = "pagekit-cms")
+    /**
+     * The minimum coverage of translation strings to be included.
+     * A value of i.e. 0.6 mean that a langauge is only included if at
+     * least 60% of original strings are translated in this language.
+     */
+    protected $coverage;
+
+    public function __construct($username, $password, $path, $coverage = 0.6, $project = "pagekit-cms")
     {
         $this->api       = new TransifexApi($username, $password, $project);
         $this->path      = $path;
         $this->resources = ['system', 'blog', 'theme-one'];
+        $this->coverage  = $coverage;
     }
 
     public function fetch()
@@ -47,10 +55,17 @@ class Fetcher
     {
         $resource = basename($resource);
 
-        foreach ($this->api->fetchLocales($resource) as $locale) {
+        list($locales, $count) = $this->api->fetchLocales($resource);
+
+        foreach ($locales as $locale) {
 
             $this->line("Fetching for ${locale} ...");
             $translations = $this->api->fetchTranslations($resource, $locale);
+
+            if(count(array_filter($translations)) < $count * $this->coverage) {
+                $this->line("Skipping ${locale} because translation coverage is too low.";
+                continue;
+            }
 
             // New languages don't have a folder yet
             $folder = sprintf('%s/languages/%s/', $this->getPath($resource), $locale);
