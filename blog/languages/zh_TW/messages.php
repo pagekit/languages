@@ -99,7 +99,7 @@
   'Leave a comment' => '留下評論',
   '{0} No comments|{1} %num% Comment|]1,Inf[ %num% Comments' => '{0} 無評論|{1} %num% 則評論|]1,Inf[ %num% 則評論',
   'Post' => '文章',
-  'View' => '',
+  'View' => '呈現',
   'Numeric' => '數字',
   'Name' => '名字',
 );
