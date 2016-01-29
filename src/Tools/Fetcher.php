@@ -62,7 +62,7 @@ class Fetcher
             $this->line("Fetching for ${locale} ...");
             $translations = $this->api->fetchTranslations($resource, $locale);
 
-            if(count(array_filter($translations)) < $count * $this->coverage) {
+            if($locale !== 'en_GB' && count(array_filter($translations)) < $count * $this->coverage) {
                 $this->line("Skipping ${locale} because translation coverage is too low.");
                 continue;
             }
