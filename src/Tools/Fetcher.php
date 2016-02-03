@@ -25,12 +25,12 @@ class Fetcher
 
     /**
      * The minimum coverage of translation strings to be included.
-     * A value of i.e. 0.6 mean that a langauge is only included if at
+     * A value of i.e. 0.6 mean that a language is only included if at
      * least 60% of original strings are translated in this language.
      */
     protected $coverage;
 
-    public function __construct($username, $password, $path, $coverage = 0.6, $project = "pagekit-cms")
+    public function __construct($username, $password, $path, $coverage = 0.0, $project = "pagekit-cms")
     {
         $this->api       = new TransifexApi($username, $password, $project);
         $this->path      = $path;
