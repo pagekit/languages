@@ -25,7 +25,7 @@
   'Image' => 'รูปภาพ',
   'Posts' => 'เรื่อง',
   'Pending' => 'รอดำเนินการ',
-  'Disabled' => '',
+  'Disabled' => 'ปิดการใช้งาน',
   'Approved' => 'ได้รับการอนุมัติ',
   'Edit Post' => 'แก้ไขเรื่อง',
   'Thank you! Your comment needs approval before showing up.' => 'ขอบคุณ! ความเห็นของคุณต้องอนุมัติก่อนขึ้นโชว์',

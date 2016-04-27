@@ -25,7 +25,7 @@
   'Image' => 'Bilde',
   'Posts' => 'Innlegg',
   'Pending' => 'Venter',
-  'Disabled' => '',
+  'Disabled' => 'Deaktivert',
   'Approved' => 'Godkjent',
   'Edit Post' => 'Rediger innlegg',
   'Thank you! Your comment needs approval before showing up.' => 'Tusen takk! Din kommentar må godkjennes av oss før den vises på siden.',
