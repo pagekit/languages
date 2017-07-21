@@ -33,7 +33,7 @@
   'Hide Title' => 'Скрыть заголовок',
   'Bottom Style' => 'Нижний стиль',
   '{0} No comments|{1} %num% Comment|]1,Inf[ %num% Comments' => '{0} Нет комментариев|{1} %num% комментарий|]1,Inf[ %num% комментариев',
-  'Enable parallax effect' => 'Включить эффект параллакса',
+  'Enable parallax effect' => 'Включить параллакс-эффект',
   'Extra large title.' => 'Очень большой заголовок.',
   'H4' => 'H4',
   'Select an optional logo for the off-canvas menu.' => 'Выберите необязательный логотип для off-canvas меню.',
